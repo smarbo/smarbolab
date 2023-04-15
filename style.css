@@ -17,5 +17,16 @@ body{
 header{
 	padding: 25px;
 	font-weight: 700;
-	background: #8888
+	background: #8888;
+	margin-bottom: 30vh;
+}
+
+footer{
+	position: absolute;
+	bottom: 0;
+	text-align: center;
+	width: 100vw;
+	height: 40px;
+	background: #8888;
+	padding: 10px;
 }
