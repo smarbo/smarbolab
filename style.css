@@ -1,9 +1,27 @@
 @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700;900&family=Open+Sans:wght@300;400;500;600;700;800&display=swap');
 
+body{
+	background-color: #0071b3;
+}
+
 /* CSS Reset and Typography */
 *{
 	font-family: 'Montserrat', sans-serif;
 	box-sizing: border-box;
 	padding: 0;
 	margin: 0;
+	text-align: center;
+	color: white;
+}
+
+header{
+	padding: 25px;
+	font-weight: 700;
+	background: #8888
+}
+
+main{
+	position: absolute;
+	left: 50%;
+	top: 50%;
 }
