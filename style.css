@@ -19,13 +19,3 @@ header{
 	font-weight: 700;
 	background: #8888
 }
-
-.main{
-	background: rgb(0, 27, 90);
-	
-	position: absolute;
-	top: 0;
-	bottom: 0;
-	left: 0;
-	right: 0;
-}
