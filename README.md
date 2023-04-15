@@ -1,2 +1,3 @@
 # Hello and Welcome
-Welcome to my website project repo. This is used for projects I make for my raspberry pi web server. If you have any questions feel free to ask by adding me on discord at edicosmos#4863. Please be aware that this readme will be changed depending on the project.
+Welcome to my website repo.
+Server address is https://obrams.ddns.net/
