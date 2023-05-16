@@ -1,24 +1,86 @@
 <!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="style.css">
-    <title>Home</title>
-</head>
-<body>
-    <header>
-        <div class="link-box">ABOUT</div>
-        <h1 class="welcome-sign">WELCOME</h1>
-        <div class="link-box">PROJECTS</div>
-    </header>
-    <div class="main">
-        <p>There are no projects available yet. :( But when there are, this page will be updated!</p>
-    </div>
-    <footer>
-        &copy; Eddie Obrams 2023
-    </footer>
+<html>
 
+<head>
+	<title>SmarboLab</title>
+	<link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@500&display=swap" rel="stylesheet">
+	<style>
+		body {
+			background-color: #062d1d;
+			display: flex;
+			align-items: center;
+			justify-content: center;
+			height: 100vh;
+		}
+
+		.container {
+			display: flex;
+			align-items: center;
+			justify-content: center;
+			flex-direction: column;
+			height: 100%;
+		}
+
+		.header {
+			font-family: 'Montserrat', sans-serif;
+			font-size: 48px;
+			font-weight: bold;
+			color: #e0fbf0;
+			margin-bottom: 40px;
+			text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+		}
+
+		.btn {
+			display: inline-block;
+			padding: 18px 35px;
+			background-color: #19b878;
+			color: #e0fbf0;
+			font-size: 28px;
+			font-weight: bold;
+			text-transform: uppercase;
+			text-align: center;
+			letter-spacing: 2px;
+			border-radius: 50px;
+			box-shadow: 0 0 10px #1cce87;
+			transition: all 0.3s ease-in-out;
+			position: relative;
+			z-index: 1;
+			outline: none;
+			border: none;
+		}
+
+		.btn:hover {
+			background-color: #1cce87;
+			box-shadow: 0 0 20px #19b878;
+			cursor: pointer;
+		}
+
+		.btn::before {
+			content: '';
+			position: absolute;
+			top: -5px;
+			left: -5px;
+			right: -5px;
+			bottom: -5px;
+			background: linear-gradient(to bottom right, #083a26, #1cce87);
+			z-index: -1;
+			filter: blur(20px);
+			border-radius: 50px;
+			opacity: 0;
+			transition: all 0.3s ease-in-out;
+		}
+
+		.btn:hover::before {
+			opacity: 1;
+		}
+	</style>
+</head>
+
+<body>
+	<div class="container">
+		<h1 class="header">Welcome to SmarboLab</h1>
+		<button id="customButton" class="btn">Enter App</button>
+	</div>	  
 </body>
+
 </html>
