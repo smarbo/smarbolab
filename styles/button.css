@@ -1,0 +1,46 @@
+/* BUTTON.CSS */
+
+.btn {
+    display: inline-block;
+    padding: 18px 35px;
+    background-color: #19b878;
+    color: #e0fbf0;
+    font-size: 28px;
+    font-weight: bold;
+    text-transform: uppercase;
+    text-align: center;
+    letter-spacing: 2px;
+    border-radius: 50px;
+    box-shadow: 0 0 10px #1cce87;
+    transition: all 0.3s ease-in-out;
+    position: relative;
+    z-index: 1;
+    outline: none;
+    border: none;
+  }
+  
+  .btn:hover {
+    background-color: #1cce87;
+    box-shadow: 0 0 20px #19b878;
+    cursor: pointer;
+  }
+  
+  .btn::before {
+    content: '';
+    position: absolute;
+    top: -5px;
+    left: -5px;
+    right: -5px;
+    bottom: -5px;
+    background: linear-gradient(to bottom right, #083a26, #1cce87);
+    z-index: -1;
+    filter: blur(20px);
+    border-radius: 50px;
+    opacity: 0;
+    transition: all 0.3s ease-in-out;
+  }
+  
+  .btn:hover::before {
+    opacity: 1;
+  }
+  
