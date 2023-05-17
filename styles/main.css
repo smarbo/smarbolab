@@ -1,76 +1,69 @@
-/* MAIN.CSS */
+@import url('https://fonts.googleapis.com/css2?family=Raleway:wght@800&display=swap');
 
-body {
-  background-color: #062d1d;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  height: 100vh;
-  overflow: hidden;
-  margin: 0;
-  font-family: "Montserrat", sans-serif;
-}
-
-.container {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  flex-direction: column;
-  height: 100%;
-}
-
-header {
+*{
+  text-decoration: none;
   color: white;
-  width: 100%;
-  padding: 10px;
-  background-color: #333;
-  position: fixed;
-  top: 0;
-  left: 0;
-}
-
-.top-nav {
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  color: #e0fbf0;
-  font-family: 'Montserrat', sans-serif;
-  font-size: 20px;
-  width: 100%;
-  max-width: 1200px;
-  margin: 0 auto;
-  padding: 10px;
+  margin: 0;
+  padding: 0;
   box-sizing: border-box;
 }
 
-.home-link,
-.account-link {
-  display: block;
+body{
+  background: #062d1d;
+  color: white;
   text-decoration: none;
-  color: #e0fbf0;
-  margin: 0 10px;
+  overflow: hidden;
+  font-family: "Raleway",sans-serif;
 }
 
-.title {
-  margin: 0;
+.container{
+  width: 100vw;
+  height: 100vh;
 }
 
-.menu-icon {
-  display: none;
+.welcome{
+  position: absolute;
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-bottom: 20vh;
+  top: 35%;
 }
 
-/* Media query for small screens */
-@media screen and (max-width: 600px) {
-  .home-link,
-  .account-link {
-    display: none;
-  }
+.welcome-header{
+  padding: 15px;
+  margin-bottom: 100px;
+}
 
-  .menu-icon {
-    display: block;
-    width: 30px;
-    height: 30px;
-    background-color: #e0fbf0;
-    cursor: pointer;
-  }
+header{
+  width: 100%;
+  height: 100%;
+}
+
+.top-nav{
+  width: 100%;
+  height: 8%;
+  background: #083f28;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+}
+
+.top-nav .title{
+  margin-left: 20%;
+  margin-right: 20%;
+  font-size: 35px;
+  font-family: "Raleway",sans-serif;
+}
+
+.top-nav .title:hover{
+  cursor:default;
+}
+
+.nav-item{
+  font-size: 20px;
+  font-family: "Raleway",sans-serif;
 }

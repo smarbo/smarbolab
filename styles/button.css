@@ -1,6 +1,7 @@
 /* BUTTON.CSS */
 
 .btn {
+    font-family: "Raleway",sans-serif;
     display: inline-block;
     padding: 18px 35px;
     background-color: #19b878;
