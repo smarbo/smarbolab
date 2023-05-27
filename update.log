@@ -1,3 +1,21 @@
+<<<<<< NOTES >>>>>>
+How this works:
+Each  update is initialized with #update {date}.
+This helps keep track of what i have done and when.
+
+The structure of these updates goes as stated below.
+DONE: {what i have completed in the update}
+DO: {what i need to do for next update}
+OPTIONAL: {things that would be cool to have but arent necessary.}
+
+
+<<<<<< START >>>>>>
+
 #update 23/05/2023
-DONE: removed coming soon box, made "you are not logged in box" and created login.html and signup.html
+DONE: removed coming soon box, made "you are not logged in" box, and created login.html and signup.html
 DO: next update add login/signup forms to corresponding pages, try make php code aswell to add accounts to db
+
+#update 27/05/2023
+DONE: added the navbar to one js script, will make it easier to change in later updates. done login & signup forms. made snake game in javascript because why not.
+DO: Next update make all pages mobile responsive and do PHP code for account management
+OPTIONAL: make an admin dashboard where i can see how many users are registered and just stats of the page.
