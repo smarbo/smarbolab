@@ -212,3 +212,16 @@ padding: 15px;
 .form-link{
   padding: 10px;
 }
+
+.error-message{
+  border: 2px solid;
+  height: 70px;
+  width: 400px;
+  background: rgba(255,0,0,0.4);
+  border-radius: 15px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 40px;
+  border-color: white;
+}

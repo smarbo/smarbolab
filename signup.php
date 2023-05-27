@@ -1,3 +1,5 @@
+<?php require_once 'controllers/authController.php'; ?>
+
 <!DOCTYPE html>
 <html>
 
@@ -13,16 +15,17 @@
     <!-- Top Navigation Bar -->
       <nav class="top-nav" id="navBar"></nav>
     <main>
+      <div class="error-message"><li>Username Required.</li></div>
       <!-- Login Form -->
       <div class="form-box">
         <img src="images/account-icon.png" class="account-icon">
         <h1 class="form-box-title">Sign Up</h1>
-        <form action="" method="post">
+        <form action="signup.php" method="post">
           <div class="form-item">
-            <input type="email" name="email" placeholder="Email Address" class="form-item-input" autocomplete="off" minlength="3">
+            <input type="email" name="email" placeholder="Email Address" class="form-item-input" autocomplete="off" minlength="3" value="<?php echo $email; ?>">
           </div>
           <div class="form-item">
-            <input type="text" name="username" placeholder="Username" class="form-item-input" autocomplete="off" minlength="3" maxlength="20">
+            <input type="text" name="username" placeholder="Username" class="form-item-input" autocomplete="off" minlength="3" maxlength="20" value="<?php echo $username; ?>">
           </div>
           <div class="form-item">
             <input type="password" name="password" placeholder="Password" class="form-item-input" autocomplete="off" minlength="7">
@@ -31,7 +34,7 @@
             <input type="password" name="passwordConf" placeholder="Confirm Password" class="form-item-input" autocomplete="off">
           </div>
           <div class="form-item">
-            <button type="submit" class="form-item-submit">SIGN UP</button>
+            <button type="submit" name="signup-btn" class="form-item-submit">SIGN UP</button>
           </div>
         </form>
         <h4 class="link-to-other-page"><a href="login.php">Already have an account?</a></h4>
