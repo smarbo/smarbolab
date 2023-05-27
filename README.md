@@ -1,4 +1,3 @@
-# Hello
-Welcome to my website repo.
-Server address is https://obrams.ddns.net/
-Will not be active 24/7.
+# SmarboLab Website
+Link: https://obrams.ddns.net
+My main project as of 23/05/2023

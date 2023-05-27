@@ -68,6 +68,19 @@ header{
   font-family: "Raleway",sans-serif;
 }
 
+main{
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.main-child{
+  margin-bottom: 10%;
+}
+
 .coming-soon{
   width: 100%;
   height: 75vh;
@@ -79,4 +92,43 @@ header{
 
 .coming-soon #child{
   margin: 30px;
+}
+
+.logged-out-box{
+  width:25%;
+  height: 35%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background: #083f28;
+  border-radius: 30px;
+  box-shadow: 10px 10px #4ca984;
+}
+
+.logged-out-box #child{
+padding: 15px;
+}
+
+.logged-out-box .button{
+  text-align: center;
+  width: 80%;
+  background: #4ca984;
+  margin-top: 10px;
+  border-radius: 15px;
+}
+
+
+.form-box{
+  background: blue;
+  width: 30%;
+  height: 60%;
+  text-align: center;
+}
+
+.form-box .form-item{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
 }

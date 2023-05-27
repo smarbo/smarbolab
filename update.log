@@ -1,0 +1,3 @@
+#update 23/05/2023
+DONE: removed coming soon box, made "you are not logged in box" and created login.html and signup.html
+DO: next update add login/signup forms to corresponding pages, try make php code aswell to add accounts to db
