@@ -15,7 +15,14 @@
     <!-- Top Navigation Bar -->
       <nav class="top-nav" id="navBar"></nav>
     <main>
-      <div class="error-message"><li>Username Required.</li></div>
+      <?php if(count($errors) > 0): ?>
+        <div class="error-message">
+          <?php foreach($errors as $error): ?>
+            <li><?php echo $error; ?></li>
+          <?php endforeach; ?>
+        </div>
+      <?php endif; ?>
+      
       <!-- Login Form -->
       <div class="form-box">
         <img src="images/account-icon.png" class="account-icon">
