@@ -19,6 +19,9 @@
         <h1 class="form-box-title">Sign Up</h1>
         <form action="" method="post">
           <div class="form-item">
+            <input type="email" name="email" placeholder="Email Address" class="form-item-input" autocomplete="off" minlength="3">
+          </div>
+          <div class="form-item">
             <input type="text" name="username" placeholder="Username" class="form-item-input" autocomplete="off" minlength="3" maxlength="20">
           </div>
           <div class="form-item">
