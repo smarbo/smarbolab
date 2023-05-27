@@ -55,21 +55,17 @@ if(isset($_POST['signup-btn'])) {
         $stmt->bind_param('ssdss', $username, $email, $verified, $token, $password);
         $stmt->execute();
 
-        if($stmt->execute()){
-            // login user
-            $user_id = $conn->insert_id;
-            $_SESSION['id'] = $user_id;
-            $_SESSION['username'] = $username;
-            $_SESSION['email'] = $email;
-            $_SESSION['verified'] = $verified;
-            // set flash message
-            $_SESSION['message'] = "You are now logged in.";
-            $_SESSION['alert-class'] = "alert-success";
-            header('location: app.php');
-            exit();
-        } else{
-            $errors['db_error'] = "Database error: Failed to register account.";
-        }
+        // login user
+        $user_id = $conn->insert_id;
+        $_SESSION['id'] = $user_id;
+        $_SESSION['username'] = $username;
+        $_SESSION['email'] = $email;
+        $_SESSION['verified'] = $verified;
+        // set flash message
+        $_SESSION['message'] = "You are now logged in.";
+        $_SESSION['alert-class'] = "alert-success";
+        header('location: app.php');
+        exit();
     }
 
 }
