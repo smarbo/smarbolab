@@ -15,8 +15,8 @@
       <div class="logged-out-box main-child">
         <h1 id="child">You are logged out.</h1>
         <p id="child" class="message" style="text-align: center;">It seems you are currently not logged in to an account.<br>Please log in to access the rest of the site.</p>
-        <a href="login.html" class="button" id="child">Log In</a>
-        <a href="signup.html" class="button" id="child">Sign Up</a>
+        <a href="login.php" class="button" id="child">Log In</a>
+        <a href="signup.php" class="button" id="child">Sign Up</a>
       </div>
       
     </main>
