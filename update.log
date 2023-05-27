@@ -7,6 +7,7 @@ The structure of these updates goes as stated below.
 DONE: {what i have completed in the update}
 DO: {what i need to do for next update}
 OPTIONAL: {things that would be cool to have but arent necessary.}
+LEFTOFF: {where i left off}
 
 
 <<<<<< START >>>>>>
@@ -19,3 +20,4 @@ DO: next update add login/signup forms to corresponding pages, try make php code
 DONE: added the navbar to one js script, will make it easier to change in later updates. done login & signup forms. made snake game in javascript because why not.
 DO: Next update make all pages mobile responsive and do PHP code for account management
 OPTIONAL: make an admin dashboard where i can see how many users are registered and just stats of the page.
+LEFTOFF: made app.php's you are logged out box work. now need login functionality. tut: https://youtu.be/8K4Wt37Itc4?t=3264
