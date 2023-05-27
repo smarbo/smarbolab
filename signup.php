@@ -1,4 +1,4 @@
-<?php require_once 'controllers/authController.php'; ?>
+<?php include('controllers/authController.php'); ?>
 
 <!DOCTYPE html>
 <html>
