@@ -215,7 +215,7 @@ padding: 15px;
 
 .error-message{
   border: 2px solid;
-  height: 70px;
+  height: 80px;
   width: 400px;
   background: rgba(255,0,0,0.4);
   border-radius: 15px;
@@ -224,4 +224,5 @@ padding: 15px;
   align-items: center;
   margin-bottom: 40px;
   border-color: white;
+  flex-direction: column;
 }
