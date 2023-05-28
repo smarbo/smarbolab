@@ -290,16 +290,32 @@ padding: 15px;
   background: #013f2a;
   border-radius: 20px;
   padding: 20px;
+  display: flex;
+  flex-direction: column;
 }
 
 .item .title{
   text-align: center;
   text-decoration: underline;
   font-size: 25px;
+  margin-bottom: 20px
+}
+
+.item p{
+  padding: 5px;
 }
 
 .navbar-img{
   height: 60px;
   position: absolute;
   transform: translate(0, -10px)
+}
+
+.settings-link{
+  position: absolute;
+  transform: translate(0,19vh);
+}
+
+.settings-link a:hover{
+  text-decoration: underline;
 }

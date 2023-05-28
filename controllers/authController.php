@@ -51,10 +51,11 @@ if(isset($_POST['signup-btn'])) {
         $verified = false;
         $smarboBitsBalance = 1000;
         $crystalShardsBalance = 100;
+        $missionsComplete = 0;
 
-        $sql = "INSERT INTO users (username, email, verified, token, password, sb_balance, cs_balance) VALUES (?,?,?,?,?,?,?)";
+        $sql = "INSERT INTO users (username, email, verified, token, password, sb_balance, cs_balance, missions_complete) VALUES (?,?,?,?,?,?,?,?)";
         $stmt = $conn->prepare($sql);
-        $stmt->bind_param('ssdssii', $username, $email, $verified, $token, $password, $smarboBitsBalance, $crystalShardsBalance);
+        $stmt->bind_param('ssdssiii', $username, $email, $verified, $token, $password, $smarboBitsBalance, $crystalShardsBalance, $missionsComplete);
         $stmt->execute();
 
         // login user
@@ -65,6 +66,7 @@ if(isset($_POST['signup-btn'])) {
         $_SESSION['verified'] = $verified;
         $_SESSION['sb_bal'] = $smarboBitsBalance;
         $_SESSION['cs_bal'] = $crystalShardsBalance;
+        $_SESSION['missions_complete'] = $missionsComplete;
         // set flash message
         $_SESSION['message'] = "You are now logged in.";
         $_SESSION['alert-class'] = "alert-success";
@@ -104,6 +106,7 @@ if(isset($_POST['login-btn'])) {
             $_SESSION['verified'] = $user['verified'];
             $_SESSION['sb_bal'] = $user['sb_balance'];
             $_SESSION['cs_bal'] = $user['cs_balance'];
+            $_SESSION['missions_complete'] = $user['missions_complete'];
             // redirect to app.php
             header('location: app.php');
             exit();
@@ -126,6 +129,7 @@ if(isset($_GET['logout'])){
     unset($_SESSION['verified']);
     unset($_SESSION['sb_bal']);
     unset($_SESSION['cs_bal']);
+    unset($_SESSION['missions_complete']);
     header('location: app.php');
     exit();
 }
