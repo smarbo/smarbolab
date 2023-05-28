@@ -15,6 +15,7 @@
     <!-- Top Navigation Bar -->
       <nav class="top-nav" id="navBar"></nav>
     <main>
+      <!-- Errors -->
       <?php if(count($errors) > 0): ?>
         <div class="error-message">
           <?php foreach($errors as $error): ?>
