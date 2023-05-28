@@ -8,7 +8,6 @@
   <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@500&display=swap" rel="stylesheet">
   <link href="styles/main.css" rel="stylesheet">
   <link rel="icon" type="image/x-icon" href="images/favicon.ico">
-  <script src="https://kit.fontawesome.com/217f704b62.js" crossorigin="anonymous"></script>
 </head>
 
 <body>
