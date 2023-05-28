@@ -115,3 +115,17 @@ if(isset($_POST['login-btn'])) {
 
     
 }
+
+
+// logout user
+if(isset($_GET['logout'])){
+    session_destroy();
+    unset($_SESSION['id']);
+    unset($_SESSION['username']);
+    unset($_SESSION['email']);
+    unset($_SESSION['verified']);
+    unset($_SESSION['sb_bal']);
+    unset($_SESSION['cs_bal']);
+    header('location: app.php');
+    exit();
+}

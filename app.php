@@ -27,7 +27,7 @@
       <?php if(isset($_SESSION['username'])): ?>
         <div class="app-box">
           <div class="app-box-topbar">Hello, <?php echo $_SESSION['username']; ?>.</div>
-          <div class="app-box-topbar logout"><a href="#logout">Log Out</a></div>
+          <div class="app-box-topbar logout"><a href="app.php?logout=1">Log Out</a></div>
           <div class="app-box-container">
             <div class="item-1 item"><h1 class="title">Overview</h1></div>
             <div class="item-2 item"><h1 class="title">Transfer</h1></div>
