@@ -83,25 +83,29 @@ if(isset($_POST['login-btn'])) {
         $errors['password'] = "Password required.";
     }
 
-    // search the db for a user with the username or email
-    $sql = "SELECT * FROM users WHERE email=? OR username=? LIMIT 1";
-    $stmt = $conn->prepare($sql);
-    $stmt->bind_param('ss', $username, $username);
-    $stmt->execute();
-    $result = $stmt->get_result();
-    $user = $result->fetch_assoc();
-    
-    if(password_verify($password, $user['password'])){
-        // login success
-        $_SESSION['id'] = $user['id'];
-        $_SESSION['username'] = $user['username'];
-        $_SESSION['email'] = $user['email'];
-        $_SESSION['verified'] = $user['verified'];
-        // redirect to app.php
-        header('location: app.php');
-        exit();
+    if(count($errors) === 0){
+        // search the db for a user with the username or email
+        $sql = "SELECT * FROM users WHERE email=? OR username=? LIMIT 1";
+        $stmt = $conn->prepare($sql);
+        $stmt->bind_param('ss', $username, $username);
+        $stmt->execute();
+        $result = $stmt->get_result();
+        $user = $result->fetch_assoc();
+        
+        if(password_verify($password, $user['password'])){
+            // login success
+            $_SESSION['id'] = $user['id'];
+            $_SESSION['username'] = $user['username'];
+            $_SESSION['email'] = $user['email'];
+            $_SESSION['verified'] = $user['verified'];
+            // redirect to app.php
+            header('location: app.php');
+            exit();
 
-    } else{
-        $errors['login_fail'] = "Incorrect details.";
+        } else{
+            $errors['login_fail'] = "Incorrect details.";
+        }
     }
+
+    
 }
