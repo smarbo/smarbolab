@@ -27,6 +27,7 @@
       <?php if(isset($_SESSION['username'])): ?>
         <div class="app-box">
           <div class="app-box-topbar">Hello, <?php echo $_SESSION['username']; ?>.</div>
+          <a>Logout</a>
         </div>
       <?php endif; ?>
     </main>
