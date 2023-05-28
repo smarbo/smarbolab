@@ -232,7 +232,7 @@ padding: 15px;
 .app-box{
   width: 70%;
   height: 80%;
-  background: #153c24;
+  background: #083f28;
   margin-bottom: 5%;
   border-radius: 20px;
   padding: 10px;
@@ -241,7 +241,7 @@ padding: 15px;
 .app-box-topbar{
   width: 100%;
   margin-left: 0.5px;
-  background: #24663d;
+  background: #4ca984;
   height: 50px;
   border-radius: 20px 20px;
   text-align: center;
@@ -250,4 +250,29 @@ padding: 15px;
   justify-content: center;
   align-items: center;
   margin-bottom: 20px;
+}
+
+.item-1{ grid-area: item1; }
+.item-2{ grid-area: item2; }
+.item-3{ grid-area: item3; }
+.item-4{ grid-area: item4; }
+.item-5{ grid-area: item5; }
+
+.app-box-container{
+  width: 100%;
+  background: #4ca984;
+  height: 90.5%;
+  border-radius: 20px;
+  display: grid;
+  grid-template-areas:
+    'item1 item1 item2 item2 item2'
+    'item1 item1 item3 item3 item4'
+    'item1 item1 item5 item5 item4';
+  gap: 10px;
+  padding: 10px;
+}
+
+.app-box-container > div{
+  background: #013f2a;
+  border-radius: 20px;
 }
