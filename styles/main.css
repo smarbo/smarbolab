@@ -249,7 +249,21 @@ padding: 15px;
   display: flex;
   justify-content: center;
   align-items: center;
-  margin-bottom: 20px;
+  margin-bottom: 10px;
+}
+
+.app-box-topbar.logout{
+  font-size: 15px;
+  height: 4%;
+  margin-bottom: 15px;
+}
+
+.app-box-topbar.logout a{
+  transition: 0.5s linear;
+}
+
+.app-box-topbar.logout a:hover{
+  color: greenyellow;
 }
 
 .item-1{ grid-area: item1; }
@@ -261,18 +275,25 @@ padding: 15px;
 .app-box-container{
   width: 100%;
   background: #4ca984;
-  height: 90.5%;
+  height: 85.5%;
   border-radius: 20px;
   display: grid;
   grid-template-areas:
-    'item1 item1 item2 item2 item2'
-    'item1 item1 item3 item3 item4'
-    'item1 item1 item5 item5 item4';
+    'item4 item4 item1 item1 item1 item1'
+    'item4 item4 item2 item2 item2 item2'
+    'item4 item4 item3 item3 item3 item3';
   gap: 10px;
   padding: 10px;
 }
 
-.app-box-container > div{
+.app-box-container > .item{
   background: #013f2a;
   border-radius: 20px;
+  padding: 20px;
+}
+
+.item .title{
+  text-align: center;
+  text-decoration: underline;
+  font-size: 25px;
 }

@@ -26,15 +26,15 @@
       <!--- If user is logged in  --->
       <?php if(isset($_SESSION['username'])): ?>
         <div class="app-box">
-          <div class="app-box-topbar">Hello, eddieo.</div>
+          <div class="app-box-topbar">Hello, <?php echo $_SESSION['username']; ?>.</div>
+          <div class="app-box-topbar logout"><a href="#logout">Log Out</a></div>
           <div class="app-box-container">
-              <div class="item-1">Item 1</div>
-              <div class="item-2">Item 2</div>
-              <div class="item-3">Item 3</div>
-              <div class="item-4">Item 4</div>
-              <div class="item-5">Item 5</div>
+            <div class="item-1 item"><h1 class="title">Overview</h1></div>
+            <div class="item-2 item"><h1 class="title">Transfer</h1></div>
+            <div class="item-3 item"><h1 class="title">Swap</h1></div>
+            <div class="item-4 item"><h1 class="title">Missions</h1></div>
           </div>
-        </div>  
+        </div>
       <?php endif; ?>
     </main>
   </div>
