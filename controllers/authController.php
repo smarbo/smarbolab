@@ -49,10 +49,12 @@ if(isset($_POST['signup-btn'])) {
         $password = password_hash($password, PASSWORD_DEFAULT);
         $token = bin2hex(random_bytes(50));
         $verified = false;
+        $smarboBitsBalance = 1000;
+        $crystalShardsBalance = 100;
 
-        $sql = "INSERT INTO users (username, email, verified, token, password) VALUES (?,?,?,?,?)";
+        $sql = "INSERT INTO users (username, email, verified, token, password, sb_balance, cs_balance) VALUES (?,?,?,?,?,?,?)";
         $stmt = $conn->prepare($sql);
-        $stmt->bind_param('ssdss', $username, $email, $verified, $token, $password);
+        $stmt->bind_param('ssdssii', $username, $email, $verified, $token, $password, $smarboBitsBalance, $crystalShardsBalance);
         $stmt->execute();
 
         // login user
@@ -61,6 +63,8 @@ if(isset($_POST['signup-btn'])) {
         $_SESSION['username'] = $username;
         $_SESSION['email'] = $email;
         $_SESSION['verified'] = $verified;
+        $_SESSION['sb_bal'] = $smarboBitsBalance;
+        $_SESSION['cs_bal'] = $crystalShardsBalance;
         // set flash message
         $_SESSION['message'] = "You are now logged in.";
         $_SESSION['alert-class'] = "alert-success";
@@ -98,6 +102,8 @@ if(isset($_POST['login-btn'])) {
             $_SESSION['username'] = $user['username'];
             $_SESSION['email'] = $user['email'];
             $_SESSION['verified'] = $user['verified'];
+            $_SESSION['sb_bal'] = $user['sb_balance'];
+            $_SESSION['cs_bal'] = $user['cs_balance'];
             // redirect to app.php
             header('location: app.php');
             exit();
