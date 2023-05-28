@@ -14,6 +14,7 @@
   <div class="container">
     <nav class="top-nav" id="navBar"></nav>
     <main>
+      <!-- If user is not logged in -->
       <?php if(!isset($_SESSION['username'])): ?>
       <div class="logged-out-box main-child">
         <h1 id="child">You are logged out.</h1>
@@ -21,6 +22,12 @@
         <a href="login.php" class="button" id="child">Log In</a>
         <a href="signup.php" class="button" id="child">Sign Up</a>
       </div>
+      <?php endif; ?>
+      <!--- If user is logged in  --->
+      <?php if(isset($_SESSION['username'])): ?>
+        <div class="app-box">
+          <div class="app-box-topbar">Hello, <?php echo $_SESSION['username']; ?>.</div>
+        </div>
       <?php endif; ?>
     </main>
   </div>

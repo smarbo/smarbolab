@@ -29,7 +29,7 @@
         <h1 class="form-box-title">Member Login</h1>
         <form action="login.php" method="post">
           <div class="form-item">
-            <input type="text" name="username" placeholder="Username or Email" class="form-item-input" autocomplete="off">
+            <input type="text" name="username" placeholder="Username or Email" class="form-item-input" autocomplete="off" value="<?php echo $username ?>">
           </div>
           <div class="form-item">
             <input type="password" name="password" placeholder="Password" class="form-item-input" autocomplete="off">
