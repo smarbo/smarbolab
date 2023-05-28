@@ -298,7 +298,7 @@ padding: 15px;
   font-size: 25px;
 }
 
-img{
+.navbar-img{
   height: 60px;
   position: absolute;
   transform: translate(0, -10px)
