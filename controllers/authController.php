@@ -102,6 +102,6 @@ if(isset($_POST['login-btn'])) {
         exit();
 
     } else{
-        $errors['login_fail'] = "Incorrect password.";
+        $errors['login_fail'] = "Incorrect details.";
     }
 }
