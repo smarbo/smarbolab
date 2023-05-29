@@ -538,7 +538,7 @@ padding: 15px;
   }
   .error-message, .success-message{
     position: absolute;
-    transform: translateY(-430px);
+    transform: translateY(-47vh);
     height: 40px;
   }
 }
