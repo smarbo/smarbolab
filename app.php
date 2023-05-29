@@ -49,14 +49,14 @@
             <div class="item-1 item">
               <h1 class="title">Overview</h1>
               <h3>Balance:</h3>
-              <p><?php echo $_SESSION['sb_bal']; ?> SmarboBits (SB)</p>
-              <p><?php echo $_SESSION['cs_bal']; ?> CrystalShards (CS)</p><br>
+              <p><?php echo number_format($_SESSION['sb_bal'], 2); ?> SmarboBits (SB)</p>
+              <p><?php echo number_format($_SESSION['cs_bal'], 2); ?> CrystalShards (CS)</p><br>
               <h3>Missions Completed: <?php echo $_SESSION['missions_complete'];?>.</h3><br>
               <h3>Account Info:</h3>
               <p>Username: <?php echo $_SESSION['username']; ?></p>
               <p>Email: <?php echo $_SESSION['email']; ?></p>
               <p>
-                <?php if($_SESSION['verified'] == 0){echo "You are not verified";}else{echo "You are verified.";} ?>
+                <?php if($_SESSION['verified'] == 0){echo "You are not verified.";}else{echo "You are verified.";} ?>
               </p>
               </div>
               <div class="item-2 item">
