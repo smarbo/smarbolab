@@ -58,7 +58,7 @@
                       <option value="crystalshards">CS</option>
                     </select>
                     <input type="number" name="amount" placeholder="Amount" class="amount" value="">
-                    <label for="reciever">---------&gt;</label>
+                    <label for="reciever">---------------&gt;</label>
                     <input type="text" name="reciever" placeholder="Reciever's Username" class="reciever" value="">
                     <button type="submit" name="transfer-btn" class="transfer-btn">Send</button>
                   </div>
