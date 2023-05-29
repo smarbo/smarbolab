@@ -48,7 +48,10 @@
           <div class="app-box-container">
             <div class="item-1 item">
               <h1 class="title">Overview</h1>
-              <p>SmarboBits Balance: <?php echo $_SESSION['sb_bal']; ?></p><p>CrystalShards Balance: <?php echo $_SESSION['cs_bal']; ?></p><p>Missions Completed: <?php echo $_SESSION['missions_complete']; ?></p>
+              <h6>Balance:</h6><br>
+              <p><?php echo $_SESSION['sb_bal']; ?>SB</p><br>
+              <p><?php echo $_SESSION['cs_bal']; ?>CS</p><br><br>
+              <h6><?php echo $_SESSION['missions_complete'];?> Missions Completed.</h6>
               </div>
               <div class="item-2 item">
                 <h1 class="title">Transfer</h1>
