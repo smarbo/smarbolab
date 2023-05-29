@@ -536,4 +536,9 @@ padding: 15px;
     border-radius: 10px;
     margin: 1px;
   }
+  .error-message, .success-message{
+    position: absolute;
+    transform: translateY(-430px);
+    height: 40px;
+  }
 }
