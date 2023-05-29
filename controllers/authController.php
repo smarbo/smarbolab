@@ -142,7 +142,7 @@ if(isset($_POST['transfer-btn'])){
 
     if($currency === "smarbobits"){
         // use smarbobits
-        if(!$amount <= $_SESSION['sb_bal']){
+        if($amount > $_SESSION['sb_bal']){
             $errors['balance_error'] = "Not enough SB balance.";
         }
 
@@ -192,7 +192,7 @@ if(isset($_POST['transfer-btn'])){
     }
     if($currency === "crystalshards"){
         // use crystalshards
-        if(!$amount <= $_SESSION['cs_bal']){
+        if($amount > $_SESSION['cs_bal']){
             $errors['balance_error'] = "Not enough CS balance.";
         }
 
