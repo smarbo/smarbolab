@@ -59,9 +59,9 @@
                 <?php if($_SESSION['verified'] == 0){echo "You are not verified.";}else{echo "You are verified.";} ?>
               </p><br>
               <h3>Other Pages:</h3>
-              <p><a href="#settings">Account Settings</a></p>
-              <p><a href="#smarboswap">SmarboSwap</a></p>
-              <p><a href="#smarbosocial">Smarbo Social</a></p>
+              <p><a href="#settings" id="other-pages-link">Account Settings</a></p>
+              <p><a href="#smarboswap" id="other-pages-link">SmarboSwap</a></p>
+              <p><a href="#smarbosocial" id="other-pages-link">Smarbo Social</a></p>
               </div>
               <div class="item-2 item">
                 <h1 class="title">Transfer</h1>

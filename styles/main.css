@@ -454,6 +454,10 @@ padding: 15px;
   
 }
 
+#other-pages-link:hover{
+  text-decoration: underline;
+}
+
 @media only screen and (max-width: 860px){
   .welcome{
       align-items: center;
