@@ -484,13 +484,8 @@ padding: 15px;
   }
 
   .app-box-container{
-	grid-template-areas:
-	  'item1'
-	  'item1'
-	  'item2'
-	  'item2'
-	  'item2'
-	  'item2';
+	display: flex;
+	flex-direction: column;
   }
 
   .item-4{
