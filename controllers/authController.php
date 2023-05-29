@@ -202,6 +202,13 @@ if(isset($_POST['transfer-btn'])){
             $stmt->bind_param('is', $recieverNewBalance, $reciever);
             $stmt->execute();
             $stmt->close();
+            // add transaction to transactions db
+            $sql = "INSERT INTO transactions (from_username, to_username, amount, currency) VALUES (?,?,?,?)";
+            $stmt = $conn->prepare($sql);
+            $stmt->bind_param('ssis', $_SESSION['username'], $reciever, $amount, "sb");
+            $stmt->execute();
+            $stmt->close();
+
             // update user's info
             $sql = "SELECT * FROM users WHERE username=? LIMIT 1";
             $stmt = $conn->prepare($sql);
@@ -249,6 +256,12 @@ if(isset($_POST['transfer-btn'])){
             $sql = "UPDATE users SET cs_balance=? WHERE users.username=?";
             $stmt = $conn->prepare($sql);
             $stmt->bind_param('is', $recieverNewBalance, $reciever);
+            $stmt->execute();
+            $stmt->close();
+            // add transaction to transactions db
+            $sql = "INSERT INTO transactions (from_username, to_username, amount, currency) VALUES (?,?,?,?)";
+            $stmt = $conn->prepare($sql);
+            $stmt->bind_param('ssis', $_SESSION['username'], $reciever, $amount, "cs");
             $stmt->execute();
             $stmt->close();
             // update user's info
