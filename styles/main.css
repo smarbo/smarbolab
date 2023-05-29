@@ -316,7 +316,7 @@ padding: 15px;
 }
 
 .app-box-container > .item{
-  background: #013f2a;
+  background-image: linear-gradient(to bottom right, #013f2a, #036443);
   border-radius: 20px;
   padding: 20px;
   padding-bottom: 0;
