@@ -216,7 +216,7 @@ if(isset($_POST['transfer-btn'])){
             $user = $result->fetch_assoc();
             $_SESSION['sb_bal'] = $user['sb_balance'];
             $_SESSION['cs_bal'] = $user['cs_balance'];
-            $completeds['transfer-success'] = "Transfer of ".$amount."SB successful.";
+            $completeds['transfer-success'] = "Transfer of ".number_format($amount)."SB successful.";
         }
     }
     if($currency === "crystalshards"){
@@ -269,7 +269,7 @@ if(isset($_POST['transfer-btn'])){
             $user = $result->fetch_assoc();
             $_SESSION['sb_bal'] = $user['sb_balance'];
             $_SESSION['cs_bal'] = $user['cs_balance'];
-            $completeds['transfer-success'] = "Transfer of ".number_format($amount, 2)."CS successful.";
+            $completeds['transfer-success'] = "Transfer of ".number_format($amount)."CS successful.";
 
         }
     }
