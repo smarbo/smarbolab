@@ -322,7 +322,13 @@ padding: 15px;
 .navbar-img{
   height: 60px;
   position: absolute;
-  transform: translate(0, -10px)
+  transform: translate(0, -10px);
+  transition: 1s cubic-bezier(0.98, -1.1, 0.58, 1);
+}
+
+.navbar-img:hover{
+  transform: translate(10px, 0);
+  transform: rotate(50deg);
 }
 
 .settings-link{
