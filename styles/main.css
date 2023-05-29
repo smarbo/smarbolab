@@ -343,6 +343,11 @@ padding: 15px;
   font-family: 'Raleway', sans-serif;
   padding-right: px;
   text-align: center;
+  height: 40px;
+}
+
+.transfer-form .currencies-select:focus{
+  outline: none;
 }
 
 
@@ -354,11 +359,16 @@ padding: 15px;
   margin: 0;
   font-size: 15px;
   font-family: 'Raleway', sans-serif;
-  text-align: center
+  text-align: center;
+  height: 40px;
 }
 
 .transfer-form .amount::placeholder{
   color: white;
+}
+
+.transfer-form .amount:focus{
+  outline: none;
 }
 
 .transfer-form .reciever{
@@ -371,10 +381,15 @@ padding: 15px;
   font-family: 'Raleway', sans-serif;
   text-align: center;
   width: 200px;
+  height: 40px;
 }
 
 .transfer-form .reciever::placeholder{
   color: white;
+}
+
+.transfer-form .reciever:focus{
+  outline: none;
 }
 
 .transfer-form .transfer-btn{
@@ -387,11 +402,14 @@ padding: 15px;
   font-family: 'Raleway', sans-serif;
   text-align: center;
   width: 80px;
+  height: 40px;
 }
 
 .transfer-form{
   display: flex;
   justify-content: center;
+  text-align: center;
+  align-items: center;
 }
 
 .item-2{
