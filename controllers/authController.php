@@ -163,6 +163,10 @@ if(isset($_POST['transfer-btn'])){
     $amount = $_POST['amount'];
     $reciever = $_POST['reciever'];
 
+    if($amount <= 0){
+        $errors['value_error'] = "You cannot transfer that amount.";
+    }
+
     if($currency === "smarbobits"){
         // use smarbobits
         if($amount > $_SESSION['sb_bal']){
