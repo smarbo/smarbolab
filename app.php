@@ -48,7 +48,7 @@
           <div class="app-box-container">
             <div class="item-1 item">
               <h1 class="title">Overview</h1>
-              <h3>Balance:</h3><br>
+              <h3>Balance:</h3>
               <p><?php echo $_SESSION['sb_bal']; ?>SB</p>
               <p><?php echo $_SESSION['cs_bal']; ?>CS</p><br>
               <h3><?php echo $_SESSION['missions_complete'];?> Missions Completed.</h3>
