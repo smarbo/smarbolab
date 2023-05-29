@@ -52,16 +52,18 @@
               <p><?php echo number_format($_SESSION['sb_bal']); ?> SmarboBits (SB)</p>
               <p><?php echo number_format($_SESSION['cs_bal']); ?> CrystalShards (CS)</p><br>
               <h3>Missions Completed: <?php echo $_SESSION['missions_complete'];?>.</h3><br>
-              <h3>Account Info:</h3>
-              <p>Username: <?php echo $_SESSION['username']; ?></p>
-              <p>Email: <?php echo $_SESSION['email']; ?></p>
-              <p>
-                <?php if($_SESSION['verified'] == 0){echo "You are not verified.";}else{echo "You are verified.";} ?>
-              </p><br>
-              <h3>Other Pages:</h3>
-              <p><a href="#settings" id="other-pages-link">Account Settings</a></p>
-              <p><a href="#smarboswap" id="other-pages-link">SmarboSwap</a></p>
-              <p><a href="#smarbosocial" id="other-pages-link">Smarbo Social</a></p>
+              <div class="section-2">
+                <h3>Account Info:</h3>
+                <p>Username: <?php echo $_SESSION['username']; ?></p>
+                <p>Email: <?php echo $_SESSION['email']; ?></p>
+                <p>
+                  <?php if($_SESSION['verified'] == 0){echo "You are not verified.";}else{echo "You are verified.";} ?>
+                </p><br>
+                <h3>Other Pages:</h3>
+                <p><a href="#settings" id="other-pages-link">Account Settings</a></p>
+                <p><a href="#smarboswap" id="other-pages-link">SmarboSwap</a></p>
+                <p><a href="#smarbosocial" id="other-pages-link">Smarbo Social</a></p>
+              </div>
               </div>
               <div class="item-2 item">
                 <h1 class="title">Transfer</h1>
