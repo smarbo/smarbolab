@@ -9,6 +9,28 @@ $completeds = array();
 $username = "";
 $email = "";
 
+function refresh(){
+    // globalize the conn variable
+    global $conn;
+
+    // check if user is logged in
+    if(isset($_SESSION['username'])){
+        $sql = "SELECT * FROM users WHERE username=? LIMIT 1";
+        $stmt = $conn->prepare($sql);
+        $stmt->bind_param('s', $_SESSION['username']);
+        $stmt->execute();
+        $result = $stmt->get_result();
+        $user = $result->fetch_assoc();
+        // relogin user (update values)
+        $_SESSION['username'] = $user['username'];
+        $_SESSION['email'] = $user['email'];
+        $_SESSION['verified'] = $user['verified'];
+        $_SESSION['sb_bal'] = $user['sb_balance'];
+        $_SESSION['cs_bal'] = $user['cs_balance'];
+        $_SESSION['missions_complete'] = $user['missions_complete'];
+    }
+}
+
 //if user click sign up
 if(isset($_POST['signup-btn'])) {
     $username = $_POST['username'];

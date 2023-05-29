@@ -1,5 +1,5 @@
-<?php require_once('controllers/authController.php'); ?>
-
+<?php require('controllers/authController.php'); ?>
+<?php refresh() ?>
 <!DOCTYPE html>
 <html>
 
