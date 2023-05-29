@@ -202,6 +202,7 @@ if(isset($_POST['transfer-btn'])){
         $stmt->bind_param('s', $reciever);
         $stmt->execute();
         $result = $stmt->get_result();
+        $recieverUser = $result->fetch_assoc();
         $userCount = $result->num_rows;
         $stmt->close();
 
@@ -217,7 +218,7 @@ if(isset($_POST['transfer-btn'])){
             $stmt->bind_param('is', $newBalance, $_SESSION['username']);
             $stmt->execute();
             $stmt->close();
-            // find recipients balance
+            // find recipients balance and get recipient user
             $recieverBalance = $recieverUser['cs_balance'];
             $recieverNewBalance = $recieverBalance + $amount;
             // set recievers balance to new one
