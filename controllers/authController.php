@@ -133,3 +133,108 @@ if(isset($_GET['logout'])){
     header('location: app.php');
     exit();
 }
+
+// transfer currency to other user
+if(isset($_POST['transfer-btn'])){
+    $currency = $_POST['currency'];
+    $amount = $_POST['amount'];
+    $reciever = $_POST['reciever'];
+
+    if($currency === "smarbobits"){
+        // use smarbobits
+        if(!$amount <= $_SESSION['sb_bal']){
+            $errors['balance_error'] = "Not enough SB balance.";
+        }
+
+        // check if user exists.
+        $userQuery = "SELECT * FROM users WHERE username=? LIMIT 1";
+        $stmt = $conn->prepare($userQuery);
+        $stmt->bind_param('s', $reciever);
+        $stmt->execute();
+        $result = $stmt->get_result();
+        $userCount = $result->num_rows;
+
+        if($userCount === 0) {
+            $errors['user_nonexistant'] = "The recipient does not exist.";
+        } else{
+            $recieverUser = $result->fetch_assoc();
+        }
+
+        $stmt->close();
+
+        if(count($errors) === 0){
+            // no errors, can continue.
+            $newBalance = $_SESSION['sb_bal'] - $amount;
+            $sql = "UPDATE users SET sb_balance=? WHERE users.username=?";
+            $stmt = $conn->prepare($sql);
+            $stmt->bind_param('is', $newBalance, $_SESSION['username']);
+            $stmt->execute();
+            $stmt->close();
+            // find recipients balance
+            $recieverBalance = $recieverUser['sb_balance'];
+            $recieverNewBalance = $recieverBalance + $amount;
+            // set recievers balance to new one
+            $sql = "UPDATE users SET sb_balance=? WHERE users.username=?";
+            $stmt = $conn->prepare($sql);
+            $stmt->bind_param('is', $recieverNewBalance, $reciever);
+            $stmt->execute();
+            $stmt->close();
+            // update user's info
+            $sql = "SELECT * FROM users WHERE username=? LIMIT 1";
+            $stmt = $conn->prepare($sql);
+            $stmt->bind_param('s', $_SESSION['username']);
+            $stmt->execute();
+            $result = $stmt->get_result();
+            $user = $result->fetch_assoc();
+            $_SESSION['sb_bal'] = $user['sb_balance'];
+            $_SESSION['cs_bal'] = $user['cs_balance'];
+        }
+    }
+    if($currency === "crystalshards"){
+        // use crystalshards
+        if(!$amount <= $_SESSION['cs_bal']){
+            $errors['balance_error'] = "Not enough CS balance.";
+        }
+
+        // check if user exists.
+        $userQuery = "SELECT * FROM users WHERE username=? LIMIT 1";
+        $stmt = $conn->prepare($userQuery);
+        $stmt->bind_param('s', $reciever);
+        $stmt->execute();
+        $result = $stmt->get_result();
+        $userCount = $result->num_rows;
+        $stmt->close();
+
+        if($userCount === 0) {
+            $errors['user_nonexistant'] = "The recipient does not exist.";
+        }
+
+        if(count($errors) === 0){
+            // no errors, can continue.
+            $newBalance = $_SESSION['cs_bal'] - $amount;
+            $sql = "UPDATE users SET cs_balance=? WHERE users.username=?";
+            $stmt = $conn->prepare($sql);
+            $stmt->bind_param('is', $newBalance, $_SESSION['username']);
+            $stmt->execute();
+            $stmt->close();
+            // find recipients balance
+            $recieverBalance = $recieverUser['cs_balance'];
+            $recieverNewBalance = $recieverBalance + $amount;
+            // set recievers balance to new one
+            $sql = "UPDATE users SET cs_balance=? WHERE users.username=?";
+            $stmt = $conn->prepare($sql);
+            $stmt->bind_param('is', $recieverNewBalance, $reciever);
+            $stmt->execute();
+            $stmt->close();
+            // update user's info
+            $sql = "SELECT * FROM users WHERE username=? LIMIT 1";
+            $stmt = $conn->prepare($sql);
+            $stmt->bind_param('s', $_SESSION['username']);
+            $stmt->execute();
+            $result = $stmt->get_result();
+            $user = $result->fetch_assoc();
+            $_SESSION['sb_bal'] = $user['sb_balance'];
+            $_SESSION['cs_bal'] = $user['cs_balance'];
+        }
+    }
+}

@@ -33,7 +33,28 @@
               <h1 class="title">Overview</h1>
               <p>SmarboBits Balance: <?php echo $_SESSION['sb_bal']; ?></p><p>CrystalShards Balance: <?php echo $_SESSION['cs_bal']; ?></p><p>Missions Completed: <?php echo $_SESSION['missions_complete']; ?></p>
               <div class="settings-link"><a href="#settings">Settings</a></div></div>
-            <div class="item-2 item"><h1 class="title">Transfer</h1></div>
+              <div class="item-2 item">
+                <h1 class="title">Transfer</h1>
+                <form action="app.php" method="post" class="transfer-form">
+                  <div>
+                    <select name="currency" class="currencies-select">
+                      <option value="smarbobits">SB</option>
+                      <option value="crystalshards">CS</option>
+                    </select>
+                    <input type="number" name="amount" placeholder="Amount" class="amount">
+                    <label for="reciever">---------&gt;</label>
+                    <input type="text" name="reciever" placeholder="Reciever's Username" class="reciever">
+                    <button type="submit" name="transfer-btn" class="transfer-btn">Send</button>
+                  </div>
+                </form>
+                <?php if(count($errors) > 0): ?>
+                  <div class="error-message">
+                    <?php foreach($errors as $error): ?>
+                      <li><?php echo $error; ?></li>
+                    <?php endforeach; ?>
+                  </div>
+                <?php endif; ?>
+              </div>
             <div class="item-3 item"><h1 class="title">Swap</h1></div>
             <div class="item-4 item"><h1 class="title">Missions</h1></div>
           </div>
