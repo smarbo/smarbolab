@@ -452,6 +452,10 @@ padding: 15px;
   
 }
 
+.item-4{
+  display: block;
+}
+
 #other-pages-link:hover{
   text-decoration: underline;
 }
@@ -481,6 +485,7 @@ padding: 15px;
   }
   .app-box{
     width: 90%;
+    height: 80.%
   }
 
   .app-box-container{
@@ -490,12 +495,43 @@ padding: 15px;
 
   .item-4{
 	display: none;
+    visibility: none;
+    height: 0;
+    width: 100%;
+    font-size: 0px;
+    padding: 0;
+    margin: 0;
+    background: rgba(0,0,0,0);
+  }
+
+  .item-4 .title{
+    font-size: 0px;
   }
 
   .item-1{
 	width: 100%;
+    text-align: center;
   }
   .section-2{
 	display: none;
+    
+  }
+
+  .item-2{
+    height: 100%;
+    
+  }
+
+  .transfer-form div{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .transfer-form div .input{
+    height: 25px;
+    border-radius: 10px;
+    margin: 1px;
   }
 }

@@ -69,14 +69,14 @@
                 <h1 class="title">Transfer</h1>
                 <form action="app.php" method="post" class="transfer-form">
                   <div>
-                    <select name="currency" class="currencies-select">
+                    <select name="currency" class="currencies-select input">
                       <option value="smarbobits">SB</option>
                       <option value="crystalshards">CS</option>
                     </select>
-                    <input type="number" name="amount" placeholder="Amount" class="amount" value="">
-                    <label for="reciever">--------&gt;</label>
-                    <input type="text" name="reciever" placeholder="Reciever's Username" class="reciever" value="">
-                    <button type="submit" name="transfer-btn" class="transfer-btn">Send</button>
+                    <input type="number" name="amount" placeholder="Amount" class="amount input" value="">
+                    <label for="reciever" style="font-size: large;">↓</label>
+                    <input type="text" name="reciever" placeholder="Reciever's Username" class="reciever input" value="">
+                    <button type="submit" name="transfer-btn" class="transfer-btn input">Send</button>
                   </div>
                 </form>
               </div>
