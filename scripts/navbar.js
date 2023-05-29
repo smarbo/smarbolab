@@ -5,7 +5,7 @@ const navigationBar = `
     </div>
     <h1 class="title">SmarboLab<img src='images/potion.png' class='navbar-img'></h1>
     <div class="nav-item-div">
-        <a class=" nav-item" href="app.php">App</a>
+        <a class=" nav-item" href="app.php">Home</a>
     </div>
 `;
 

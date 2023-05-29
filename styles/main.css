@@ -67,6 +67,11 @@ header{
   margin: 100px;
   font-size: 35px;
   font-family: "Raleway",sans-serif;
+  transition: cubic-bezier(0.8, -0.74, 0.13, 0.95) 0.3s;
+}
+
+.top-nav .title:hover{
+  font-size: 45px;
 }
 
 .top-nav .title:hover{
