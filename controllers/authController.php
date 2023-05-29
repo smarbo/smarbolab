@@ -185,6 +185,10 @@ if(isset($_POST['transfer-btn'])){
 
         $stmt->close();
 
+        if($_SESSION['username'] == $reciever){
+            $errors['cannot_send_to_self'] = "You cannot transfer to yourself.";
+        }
+
         if(count($errors) === 0){
             // no errors, can continue.
             $newBalance = $_SESSION['sb_bal'] - $amount;
@@ -230,6 +234,10 @@ if(isset($_POST['transfer-btn'])){
         $recieverUser = $result->fetch_assoc();
         $userCount = $result->num_rows;
         $stmt->close();
+
+        if($_SESSION['username'] == $reciever){
+            $errors['cannot_send_to_self'] = "You cannot transfer to yourself.";
+        }
 
         if($userCount === 0) {
             $errors['user_nonexistant'] = "The recipient does not exist.";
