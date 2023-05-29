@@ -55,16 +55,16 @@ if(isset($_POST['signup-btn'])) {
         $errors['password'] = "The passwords do not match.";
     }
 
-    $emailQuery = "SELECT * FROM users WHERE email=? LIMIT 1";
+    $emailQuery = "SELECT * FROM users WHERE email=? OR username=? LIMIT 1";
     $stmt = $conn->prepare($emailQuery);
-    $stmt->bind_param('s', $email);
+    $stmt->bind_param('ss', $email, $username);
     $stmt->execute();
     $result = $stmt->get_result();
     $userCount = $result->num_rows;
     $stmt->close();
 
     if($userCount > 0) {
-        $errors['email'] = "Email already registered.";
+        $errors['email'] = "Email or username already registered.";
     }
 
     // signup process
