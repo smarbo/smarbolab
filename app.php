@@ -51,11 +51,13 @@
               <h3>Balance:</h3>
               <p><?php echo $_SESSION['sb_bal']; ?> SmarboBits (SB)</p>
               <p><?php echo $_SESSION['cs_bal']; ?> CrystalShards (CS)</p><br>
-              <h3><?php echo $_SESSION['missions_complete'];?> Missions Completed.</h3>
+              <h3>Missions Completed: <?php echo $_SESSION['missions_complete'];?>.</h3><br>
               <h3>Account Info:</h3>
               <p>Username: <?php echo $_SESSION['username']; ?></p>
               <p>Email: <?php echo $_SESSION['email']; ?></p>
-              <p>Verified: <?php echo $_SESSION['verified']; ?></p>
+              <p>
+                <?php if($_SESSION['verified'] == 0){echo "You are not verified";}else{echo "You are verified.";} ?>
+              </p>
               </div>
               <div class="item-2 item">
                 <h1 class="title">Transfer</h1>

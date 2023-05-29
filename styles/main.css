@@ -391,6 +391,10 @@ padding: 15px;
   outline: none;
 }
 
+.transfer-form{
+  margin-top: 50px;
+}
+
 .transfer-form .reciever{
   color: white;
   background: #4ca984;
@@ -463,5 +467,12 @@ padding: 15px;
   }
   .form-box{
     width: 95%;
+  }
+
+  .transfer-form{
+    margin-top: 0;
+  }
+  .app-box{
+    width: 90%;
   }
 }
