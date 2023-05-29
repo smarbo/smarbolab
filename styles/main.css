@@ -485,7 +485,9 @@ padding: 15px;
   }
   .app-box{
     width: 90%;
-    height: 80.%
+    height: 80%;
+    position: absolute;
+    transform: translate(0, -50px);
   }
 
   .app-box-container{
