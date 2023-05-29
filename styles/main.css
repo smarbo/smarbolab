@@ -319,3 +319,76 @@ padding: 15px;
 .settings-link a:hover{
   text-decoration: underline;
 }
+
+.transfer-form .currencies-select{
+  color:white;
+  background: #4ca984;
+  border: 2px solid;
+  border-radius: 10px 0 0 10px;
+  margin: 0;
+  font-family: 'Raleway', sans-serif;
+  padding-right: px;
+  text-align: center;
+}
+
+
+.transfer-form .amount{
+  color: white;
+  background: #4ca984;
+  border: 2px solid;
+  border-radius: 0 10px 10px 0;
+  margin: 0;
+  font-size: 15px;
+  font-family: 'Raleway', sans-serif;
+  text-align: center
+}
+
+.transfer-form .amount::placeholder{
+  color: white;
+}
+
+.transfer-form .reciever{
+  color: white;
+  background: #4ca984;
+  border: 2px solid;
+  border-radius: 10px 0 0 10px;
+  margin: 0px;
+  font-size: 15px;
+  font-family: 'Raleway', sans-serif;
+  text-align: center;
+  width: 200px;
+}
+
+.transfer-form .reciever::placeholder{
+  color: white;
+}
+
+.transfer-form .transfer-btn{
+  color: white;
+  background: #4ca984;
+  border: 2px solid;
+  border-radius: 0 10px 10px 0;
+  margin: 0px;
+  font-size: 15px;
+  font-family: 'Raleway', sans-serif;
+  text-align: center;
+  width: 80px;
+}
+
+.transfer-form{
+  display: flex;
+  justify-content: center;
+}
+
+.item-2{
+  display: flex;
+  align-items: center;
+}
+
+.item-2 .error-message{
+  width: 500px;
+  height: 60px;
+  position: absolute;
+  transform: translate(0,9vh)
+  
+}

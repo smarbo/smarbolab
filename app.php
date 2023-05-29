@@ -32,7 +32,7 @@
             <div class="item-1 item">
               <h1 class="title">Overview</h1>
               <p>SmarboBits Balance: <?php echo $_SESSION['sb_bal']; ?></p><p>CrystalShards Balance: <?php echo $_SESSION['cs_bal']; ?></p><p>Missions Completed: <?php echo $_SESSION['missions_complete']; ?></p>
-              <div class="settings-link"><a href="#settings">Settings</a></div></div>
+              </div>
               <div class="item-2 item">
                 <h1 class="title">Transfer</h1>
                 <form action="app.php" method="post" class="transfer-form">
