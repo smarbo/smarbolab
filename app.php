@@ -49,8 +49,8 @@
             <div class="item-1 item">
               <h1 class="title">Overview</h1>
               <h3>Balance:</h3>
-              <p><?php echo $_SESSION['sb_bal']; ?>SB</p>
-              <p><?php echo $_SESSION['cs_bal']; ?>CS</p><br>
+              <p><?php echo $_SESSION['sb_bal']; ?> SmarboBits (SB)</p>
+              <p><?php echo $_SESSION['cs_bal']; ?> CrystalShards (CS)</p><br>
               <h3><?php echo $_SESSION['missions_complete'];?> Missions Completed.</h3>
               </div>
               <div class="item-2 item">
@@ -68,7 +68,6 @@
                   </div>
                 </form>
               </div>
-            <div class="item-3 item"><h1 class="title">Swap</h1></div>
             <div class="item-4 item"><h1 class="title">Missions</h1></div>
           </div>
         </div>

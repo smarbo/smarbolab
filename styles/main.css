@@ -302,10 +302,11 @@ padding: 15px;
   border-radius: 20px;
   display: grid;
   grid-template-areas:
-    'item4 item4 item1 item1 item1 item1'
-    'item4 item4 item2 item2 item2 item2'
-    'item4 item4 item3 item3 item3 item3';
-  gap: 10px;
+    'item4 item4 item4 item4 item1 item1 item1 item1'
+    'item4 item4 item4 item4 item1 item1 item1 item1'
+    'item4 item4 item4 item4 item1 item1 item1 item1'
+    'item2 item2 item2 item2 item1 item1 item1 item1';
+  gap:10px;
   padding: 10px;
 }
 
@@ -313,15 +314,17 @@ padding: 15px;
   background: #013f2a;
   border-radius: 20px;
   padding: 20px;
+  padding-bottom: 0;
   display: flex;
   flex-direction: column;
 }
+
 
 .item .title{
   text-align: center;
   text-decoration: underline;
   font-size: 25px;
-  margin-bottom: 20px
+  margin-bottom: 20px;
 }
 
 .item p{
@@ -348,6 +351,8 @@ padding: 15px;
 .settings-link a:hover{
   text-decoration: underline;
 }
+
+
 
 .transfer-form .currencies-select{
   color:white;
