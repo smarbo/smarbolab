@@ -26,7 +26,7 @@
       <!--- If user is logged in  --->
       <?php if(isset($_SESSION['username'])): ?>
         <div class="app-box">
-          <div class="app-box-topbar">Hello, admin.</div>
+          <div class="app-box-topbar">Hello, <?php echo $_SESSION['username']; ?>.</div>
           <div class="app-box-topbar logout"><a href="app.php?logout=1">Log Out</a></div>
           <div class="app-box-container">
             <div class="item-1 item">
@@ -41,9 +41,9 @@
                       <option value="smarbobits">SB</option>
                       <option value="crystalshards">CS</option>
                     </select>
-                    <input type="number" name="amount" placeholder="Amount" class="amount">
+                    <input type="number" name="amount" placeholder="Amount" class="amount" value="">
                     <label for="reciever">---------&gt;</label>
-                    <input type="text" name="reciever" placeholder="Reciever's Username" class="reciever">
+                    <input type="text" name="reciever" placeholder="Reciever's Username" class="reciever" value="">
                     <button type="submit" name="transfer-btn" class="transfer-btn">Send</button>
                   </div>
                 </form>
@@ -64,6 +64,12 @@
   </div>
   <!-- Navbar Script -->
   <script src="scripts/navbar.js"></script>
+  <!-- Script to remove Confirm Resubmission popup on refresh. -->
+  <script>
+    if ( window.history.replaceState ) {
+      window.history.replaceState( null, null, window.location.href );
+    }
+  </script>
 </body>
 
 </html>
