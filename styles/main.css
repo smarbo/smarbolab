@@ -228,6 +228,20 @@ padding: 15px;
   flex-direction: column;
 }
 
+.success-message{
+  border: 2px solid;
+  height: 80px;
+  width: 400px;
+  background: rgba(68, 255, 0, 0.4);
+  border-radius: 15px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 40px;
+  border-color: white;
+  flex-direction: column;
+}
+
 
 .app-box{
   width: 70%;

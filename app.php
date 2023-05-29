@@ -24,6 +24,22 @@
       </div>
       <?php endif; ?>
       <!--- If user is logged in  --->
+      <!-- Error messages -->
+      <?php if(count($errors) > 0): ?>
+        <div class="error-message">
+          <?php foreach($errors as $error): ?>
+            <li><?php echo $error; ?></li>
+          <?php endforeach; ?>
+        </div>
+      <?php endif; ?>
+      <!-- Success messages -->
+      <?php if(count($completeds) > 0): ?>
+        <div class="success-message">
+          <?php foreach($completeds as $complete): ?>
+            <li><?php echo $complete; ?></li>
+          <?php endforeach; ?>
+        </div>
+      <?php endif; ?>
       <?php if(isset($_SESSION['username'])): ?>
         <div class="app-box">
           <div class="app-box-topbar">Hello, <?php echo $_SESSION['username']; ?>.</div>
@@ -47,13 +63,6 @@
                     <button type="submit" name="transfer-btn" class="transfer-btn">Send</button>
                   </div>
                 </form>
-                <?php if(count($errors) > 0): ?>
-                  <div class="error-message">
-                    <?php foreach($errors as $error): ?>
-                      <li><?php echo $error; ?></li>
-                    <?php endforeach; ?>
-                  </div>
-                <?php endif; ?>
               </div>
             <div class="item-3 item"><h1 class="title">Swap</h1></div>
             <div class="item-4 item"><h1 class="title">Missions</h1></div>

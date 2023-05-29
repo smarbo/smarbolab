@@ -5,6 +5,7 @@ session_start();
 require 'config/db.php';
 
 $errors = array();
+$completeds = array();
 $username = "";
 $email = "";
 
@@ -68,8 +69,7 @@ if(isset($_POST['signup-btn'])) {
         $_SESSION['cs_bal'] = $crystalShardsBalance;
         $_SESSION['missions_complete'] = $missionsComplete;
         // set flash message
-        $_SESSION['message'] = "You are now logged in.";
-        $_SESSION['alert-class'] = "alert-success";
+        $completeds['login-success'] = "You are now logged in.";
         header('location: app.php');
         exit();
     }
@@ -107,6 +107,7 @@ if(isset($_POST['login-btn'])) {
             $_SESSION['sb_bal'] = $user['sb_balance'];
             $_SESSION['cs_bal'] = $user['cs_balance'];
             $_SESSION['missions_complete'] = $user['missions_complete'];
+            $completeds['login-success'] = "You are now logged in.";
             // redirect to app.php
             header('location: app.php');
             exit();
@@ -188,6 +189,7 @@ if(isset($_POST['transfer-btn'])){
             $user = $result->fetch_assoc();
             $_SESSION['sb_bal'] = $user['sb_balance'];
             $_SESSION['cs_bal'] = $user['cs_balance'];
+            $completeds['transfer-success'] = "Transfer of ".$amount."SB successful.";
         }
     }
     if($currency === "crystalshards"){
@@ -236,6 +238,7 @@ if(isset($_POST['transfer-btn'])){
             $user = $result->fetch_assoc();
             $_SESSION['sb_bal'] = $user['sb_balance'];
             $_SESSION['cs_bal'] = $user['cs_balance'];
+            $completeds['transfer-success'] = "Transfer of ".$amount."CS successful.";
         }
     }
 }

@@ -24,7 +24,7 @@ LEFTOFF: made app.php's you are logged out box work. now need login functionalit
 
 #update 28/05/2023
 DONE: made PHP code for accounts, currency system now working and transfer system.
-DO: MOBILE RESPONSIVE!!!!!!!!
+DO: MOBILE RESPONSIVE!!!!!!!! AND make success messages.
 OPTIONAL: make an admin dashboard where i can see how many users are registered and just stats of the page. you can also set any users balance
 LEFTOFF: just finished transfer system. now just need swapping :) im happy with this so far
 
