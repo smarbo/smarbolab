@@ -26,5 +26,9 @@ LEFTOFF: made app.php's you are logged out box work. now need login functionalit
 DONE: made PHP code for accounts, currency system now working and transfer system.
 DO: MOBILE RESPONSIVE!!!!!!!! AND make success messages. also make it so users cannot register with the same username.
 OPTIONAL: make an admin dashboard where i can see how many users are registered and just stats of the page. you can also set any users balance or verify any user
-LEFTOFF: just finished transfer system. now just need swapping :) im happy with this so far
+LEFTOFF: just finished transfer system. now just need swapping
 
+#update 29/05/2023
+DONE: made mobile responsive sort of, made success messages, users cant register with same username.
+DO: add email verification with the tutorial part 2. make a swap system, 10 sb = 3 cs
+OPTIONAL: admin dashboard

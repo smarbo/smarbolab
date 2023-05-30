@@ -163,7 +163,7 @@ if(isset($_POST['transfer-btn'])){
     $amount = $_POST['amount'];
     $reciever = $_POST['reciever'];
 
-    if($amount <= 0){
+    if($amount < 0){
         $errors['value_error'] = "You cannot transfer that amount.";
     }
 
