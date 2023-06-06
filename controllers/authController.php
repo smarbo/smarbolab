@@ -282,3 +282,29 @@ if(isset($_POST['transfer-btn'])){
         }
     }
 }
+
+// verify the user by token
+function verifyUser($token)
+{
+   global $conn;
+   $sql = "SELECT * FROM users WHERE token='$token' LIMIT 1";
+   $result = mysqli_query($conn, $sql);
+
+   if(mysqli_num_rows($result) > 0){
+    $user = mysqli_fetch_assoc($result);
+    $update_query = "UPDATE users SET verified=1 WHERE token='$token'";
+
+    if(mysqli_query($conn, $update_query)){
+        // log user in
+        $_SESSION['id'] = $user['id'];
+        $_SESSION['username'] = $user['username'];
+        $_SESSION['email'] = $user['email'];
+        $_SESSION['verified'] = $user['verified'];
+        $_SESSION['sb_bal'] = $user['sb_balance'];
+        $_SESSION['cs_bal'] = $user['cs_balance'];
+        $_SESSION['missions_complete'] = $user['missions_complete'];
+        // set flash message
+        $completeds['email-verify-success'] = "You are now verified!";
+    }
+   }
+}
