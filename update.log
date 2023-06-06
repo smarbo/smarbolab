@@ -32,3 +32,9 @@ LEFTOFF: just finished transfer system. now just need swapping
 DONE: made mobile responsive sort of, made success messages, users cant register with same username.
 DO: add email verification with the tutorial part 2. make a swap system, 10 sb = 3 cs
 OPTIONAL: admin dashboard
+
+#update 06/06/2023
+DONE: made email verification sort of
+DO: fix success message, make a swap system, 10 sb = 3 cs
+OPTIONAL: admin dashboard
+LEFTOFF: just finished email verification system but still need to make success message after verify success.
