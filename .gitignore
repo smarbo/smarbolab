@@ -1,1 +1,4 @@
 config/constants.php
+composer.json
+composer.lock
+vendor

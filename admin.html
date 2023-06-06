@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <title>App - SmarboLab</title>
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@500&display=swap" rel="stylesheet">
+  <link href="styles/main.css" rel="stylesheet">
+  <link rel="icon" type="image/x-icon" href="images/favicon.ico">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+</head>
+
+<body>
+  <div class="container">
+    <nav class="top-nav" id="navBar"></nav>
+    <main>
+        <div class="app-box admin">
+          <div class="app-box-topbar admin">SmarboLab Admin</div>
+          <div class="app-box-container admin">  
+            <div class="money-printer item">
+              <h3 class="item-title" style="text-decoration: underline;">SmarboLab Money Printer 4000</h3>
+              <form action="" method="post">
+
+              </form>
+            </div>
+            <div class="balance-control item">Hello</div>
+          </div>
+        </div>
+    </main>
+  </div>
+  <!-- Navbar Script -->
+  <script src="scripts/navbar.js"></script>
+  <!-- Script to remove Confirm Resubmission popup on refresh. -->
+  <script>
+    if ( window.history.replaceState ) {
+      window.history.replaceState( null, null, window.location.href );
+    }
+  </script>
+</body>
+
+</html>

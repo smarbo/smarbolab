@@ -3,6 +3,7 @@
 session_start();
 
 require 'config/db.php';
+require_once 'emailController.php';
 
 $errors = array();
 $completeds = array();
@@ -90,6 +91,9 @@ if(isset($_POST['signup-btn'])) {
         $_SESSION['sb_bal'] = $smarboBitsBalance;
         $_SESSION['cs_bal'] = $crystalShardsBalance;
         $_SESSION['missions_complete'] = $missionsComplete;
+
+        sendVerificationEmail($email, $token);
+        
         // set flash message
         $completeds['login-success'] = "You are now logged in.";
         header('location: app.php');
