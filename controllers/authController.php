@@ -287,6 +287,8 @@ if(isset($_POST['transfer-btn'])){
 function verifyUser($token)
 {
    global $conn;
+   global $completeds;
+   global $errors;
    $sql = "SELECT * FROM users WHERE token='$token' LIMIT 1";
    $result = mysqli_query($conn, $sql);
 
@@ -299,12 +301,17 @@ function verifyUser($token)
         $_SESSION['id'] = $user['id'];
         $_SESSION['username'] = $user['username'];
         $_SESSION['email'] = $user['email'];
-        $_SESSION['verified'] = $user['verified'];
+        $_SESSION['verified'] = 1;
         $_SESSION['sb_bal'] = $user['sb_balance'];
         $_SESSION['cs_bal'] = $user['cs_balance'];
         $_SESSION['missions_complete'] = $user['missions_complete'];
         // set flash message
-        $completeds['email-verify-success'] = "You are now verified!";
+        $completeds['verified'] = "You are now verified!";
+        header('location: app.php');
+        exit();
     }
+   }
+   else {
+    $errors['usernotfound'] = "User not found.";
    }
 }
